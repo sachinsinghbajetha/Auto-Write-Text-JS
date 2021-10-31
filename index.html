@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto write text</title>
+</head>
+<style>
+body {
+	display: grid;
+	place-items: center;
+	min-height: 100vh;
+	color: white;
+	background-color: royalblue;
+	font-size: 1.5rem;
+	font-family: sans-serif;
+}
+</style>
+<body>
+</body>
+
+<script>
+const text = "Oh wow!! Magic🪄"
+
+let index = 0;
+
+function autoWriteText() {
+	document.body.innerText = text.slice(0,index);
+	index++;
+	// if statement can be removed if you did'nt want to repeat the same text
+  if (index > text.length){
+    index = 0;
+  }
+}
+	
+setInterval(autoWriteText,150);
+</script>
+
+</html>
